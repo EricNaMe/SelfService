@@ -1,0 +1,60 @@
+
+
+
+<!--<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd ">-->
+    
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:jee="http://www.springframework.org/schema/jee"
+       xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.2.xsd">
+
+    
+
+<!-- esta es la que tenia en local-->
+<!--<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:jee="http://www.springframework.org/schema/jee"
+       xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.2.xsd">-->
+
+        
+    
+       <!--     <bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+ 
+		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />
+		<property name="url" value="jdbc:oracle:thin:@ftizssddb051.ftdc.cummins.com:1528:CMXD1" />
+		<property name="username" value="zmkt" />
+		<property name="password" value="zmkt#1" />
+	</bean>
+      
+  
+     
+        <bean id="dataSourceOracleInterface"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+ 
+		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />
+		<property name="url" value="jdbc:oracle:thin:@cidcsslpgiea2.cidc.cummins.com:1536:SLP1D" />
+		<property name="username" value="xxlotus" />
+		<property name="password" value="xxlotus1302" />
+	</bean>
+   -->
+
+  
+                 
+ <jee:jndi-lookup id="dataSource"
+   jndi-name="jdbc/ZMKTDS"
+   expected-type="javax.sql.DataSource" />
+        
+        <jee:jndi-lookup id="dataSourceOracleInterface"
+   jndi-name="jdbc/xxlotusds"
+   expected-type="javax.sql.DataSource" />
+
+</beans>

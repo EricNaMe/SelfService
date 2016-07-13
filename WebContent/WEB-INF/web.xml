@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <servlet>
+    <servlet-name>GetDocuments</servlet-name>
+    <servlet-class>Servlets.GetDocuments</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GetDocuments</servlet-name>
+    <url-pattern>/GetDocuments</url-pattern>
+  </servlet-mapping>
+  <session-config>
+    <session-timeout>30</session-timeout>
+  </session-config>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>DownloadFile</display-name>
+    <servlet-name>DownloadFile</servlet-name>
+    <servlet-class>Servlets.DownloadFile</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DownloadFile</servlet-name>
+    <url-pattern>/DownloadFile</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AttachFile</display-name>
+    <servlet-name>AttachFile</servlet-name>
+    <servlet-class>Servlets.AttachFile</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AttachFile</servlet-name>
+    <url-pattern>/AttachFile</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>EliminarDoc</display-name>
+    <servlet-name>EliminarDoc</servlet-name>
+    <servlet-class>Servlets.EliminarDoc</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EliminarDoc</servlet-name>
+    <url-pattern>/EliminarDoc</url-pattern>
+  </servlet-mapping>
+</web-app>
